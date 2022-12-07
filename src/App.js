@@ -1,10 +1,10 @@
 import '@Src/App.css';
-import Home from "@Pages/home";
+import RouterCustom from "./routes";
 
 const App = () => {
   return (
     <div className="App">
-      <Home />
+      <RouterCustom />
     </div>
   );
 }

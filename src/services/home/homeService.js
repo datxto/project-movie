@@ -1,6 +1,6 @@
 import baseRequest from "@Services/baseRequest";
 
-export const fetchMoviePlaying = async (page) => {
+export const fetchMovies = async (page) => {
   let results = [];
   let totalPages = 0;
   let totalResults = 0;
