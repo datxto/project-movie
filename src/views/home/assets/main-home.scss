@@ -1,0 +1,17 @@
+.card_custom {
+  padding: 10px;
+  border: none;
+  .body_custom {
+    text-align: left;
+    padding: 10px 5px;
+    background: #fafafa;
+    border: 1px solid #f1f1f1;
+    .card-title {
+      margin-bottom: 5px;
+    }
+    .card-text {
+      color: #a9a9a9;
+      font-size: 12px;
+    }
+  }
+}
