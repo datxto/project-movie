@@ -1,0 +1,17 @@
+.skeleton_box {
+  animation: shimmer 2s ease-out 0s infinite;
+  transform: translate3d(0px, 0px, 0px);
+  display: inline-block;
+  border-radius: 4px;
+  @keyframes shimmer {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
