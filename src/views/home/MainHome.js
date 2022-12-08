@@ -7,7 +7,8 @@ import { Link } from "react-router-dom";
 import Skeleton from "@Views/layout/Skeleton";
 
 const MainHome = ({...props}) => {
-  const {listMovie, isLoading} = props;
+  const {listMovie, isLoading, viewType} = props;
+
   const convertDate = (item) => {
     return moment(item.release_date).format("ll");
   };
@@ -23,7 +24,7 @@ const MainHome = ({...props}) => {
       ) : listMovie.length ? (
         listMovie.map((item) => {
           return (
-            <Col xs={6} sm={4} lg={3} key={item.id} className="mb-3">
+            <Col xs={6} sm={4} lg={3} key={item.id} className={`mb-3 ${viewType === 'list' ? 'list_custom' : ''}`}>
               <Card className='h-100 card_custom'>
                 <Link to={`/details/${item.id}`}>
                   <AsyncImage

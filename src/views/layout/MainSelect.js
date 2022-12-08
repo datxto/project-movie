@@ -2,7 +2,8 @@ import {Form} from "react-bootstrap";
 import Select from "react-select";
 import "@Views/layout/assets/main-select.scss";
 
-const MainSelect = ({type, setCurrentPage, setType}) => {
+const MainSelect = ({type, viewType, setViewType, setCurrentPage, setType}) => {
+  console.log(viewType)
   const optionsType = [
     {label: 'Now Playing', value: 'now_playing'},
     {label: 'Top Rated', value: 'top_rated'},
@@ -23,6 +24,10 @@ const MainSelect = ({type, setCurrentPage, setType}) => {
           setType(item);
         }}
       />
+      <div className="group_btn">
+        <button onClick={() => setViewType('grid')} className={`btn ${viewType === 'grid' ? 'active' : ''}`}>Grid</button>
+        <button onClick={() => setViewType('list')} className={`btn ${viewType === 'list' ? 'active' : ''}`}>List</button>
+      </div>
     </div>
   )
 }

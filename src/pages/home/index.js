@@ -15,6 +15,7 @@ const Home = () => {
     label: 'Now Playing',
     value: 'now_playing',
   });
+  const [viewType, setViewType] = useState('grid');
 
   useEffect(() => {
     const init = async () => {
@@ -39,8 +40,8 @@ const Home = () => {
     <>
       <Header />
       <Container className="d-flex flex-wrap mt-4">
-        <MainSelect type={type} setCurrentPage={setCurrentPage} setType={setType} />
-        <MainHome listMovie={listMovie} isLoading={isLoading} />
+        <MainSelect type={type} viewType={viewType} setViewType={setViewType} setCurrentPage={setCurrentPage} setType={setType} />
+        <MainHome listMovie={listMovie} isLoading={isLoading} viewType={viewType} />
         {listMovie.length && (
           <MainPagination
             handlerCurrentPage={setCurrentPage}

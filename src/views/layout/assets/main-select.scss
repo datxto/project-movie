@@ -6,4 +6,22 @@
     padding-top: 7px;
     padding-right: 10px;
   }
+  .group_btn {
+    margin-left: 20px;
+    .btn {
+      border: none;
+      outline: none;
+      padding: 7px 14px;
+      background: #f1f1f1;
+      cursor: pointer;
+      margin-left: 5px;
+      &:hover {
+        background: #ddd;
+      }
+      &.active {
+        background: #666;
+        color: #fff;
+      }
+    }
+  }
 }

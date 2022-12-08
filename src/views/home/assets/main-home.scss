@@ -24,3 +24,24 @@
 .text_center {
   margin: 0 auto;
 }
+
+.list_custom {
+  width: 100%;
+  .card_custom {
+    a {
+      width: 100%;
+      background: #fafafa;
+      border: 1px solid #f1f1f1;
+      img {
+        width: 130px;
+        float: left;
+      }
+      .body_custom {
+        width: calc(100% - 130px);
+        float: right;
+        border: none;
+        padding: 10px 20px;
+      }
+    }
+  }
+}
