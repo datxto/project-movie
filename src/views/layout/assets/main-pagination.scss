@@ -1,0 +1,17 @@
+.custom_pagination {
+  margin: 0 auto;
+  padding-top: 20px;
+  .pagination {
+    display: inline-flex;
+    .page-item.active .page-link {
+      background-color: #0141e4;
+      color: #fff;
+      border: none;
+    }
+
+    .page-link {
+      color: #000;
+    }
+  }
+}
+

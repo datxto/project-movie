@@ -1,9 +1,7 @@
 import baseRequest from "@Services/baseRequest";
 
 export const fetchMovies = async (page) => {
-  let results = [];
-  let totalPages = 0;
-  let totalResults = 0;
+  let data;
   let params = {
     page: page
   };
@@ -11,14 +9,8 @@ export const fetchMovies = async (page) => {
   await baseRequest.get(`/movie/now_playing`, {
     params: params
   }).then(res => {
-    results = res.data.results;
-    totalPages = res.data.total_pages;
-    totalResults = res.data.total_results;
+    data = res.data;
   })
 
-  return {
-    results: results,
-    totalPages: totalPages,
-    totalResults: totalResults,
-  }
+  return data;
 };
