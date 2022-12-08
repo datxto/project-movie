@@ -3,7 +3,6 @@ import Select from "react-select";
 import "@Views/layout/assets/main-select.scss";
 
 const MainSelect = ({type, viewType, setViewType, setCurrentPage, setType}) => {
-  console.log(viewType)
   const optionsType = [
     {label: 'Now Playing', value: 'now_playing'},
     {label: 'Top Rated', value: 'top_rated'},
