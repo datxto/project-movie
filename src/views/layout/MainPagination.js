@@ -29,7 +29,7 @@ const MainPagination = ({...props}) => {
     }
 
     setListPagination(list);
-  }, [isLoading]);
+  }, [isLoading, currentPage, totalPages]);
 
   return (
     <Container className="custom_pagination">
