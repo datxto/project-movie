@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const AsyncImage = (props) => {
   const [loadedSrc, setLoadedSrc] = useState(null);
@@ -20,7 +21,7 @@ const AsyncImage = (props) => {
 
   if (loadedSrc === props.src) {
     return (
-      <img alt="" {...props} />
+      <LazyLoadImage alt="" {...props} />
     );
   }
 

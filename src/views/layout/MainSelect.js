@@ -10,7 +10,7 @@ const MainSelect = ({type, viewType, setViewType, setCurrentPage, setType}) => {
 
   return (
     <div className="d-flex flex-wrap select_custom">
-      <Form.Label className="field-label">View by</Form.Label>
+      <Form.Label className="field-label">View: </Form.Label>
       <Select
         noOptionsMessage={() => "No options"}
         classNamePrefix="react-select"

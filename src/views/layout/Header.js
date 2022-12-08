@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import "@Views/layout/assets/header.scss";
 import {Button, Form, Navbar, Nav} from "react-bootstrap";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {useParams, useNavigate} from "react-router-dom";
 
 const Header = () => {
@@ -15,15 +15,6 @@ const Header = () => {
       pathname: `/search/${word}`,
     });
   }
-
-  useEffect(() => {
-    if (!word.length) {
-      navigate({
-        pathname: `/`,
-      });
-    }
-  }, [word]);
-
 
   return (
     <Navbar bg="dark" variant="dark">
