@@ -17,8 +17,13 @@ const MainHome = ({...props}) => {
     <>
       {isLoading ? (
         Array.from(Array(4).keys()).map((_, index) => (
-          <Col xs={6} sm={4} lg={3} key={index} style={{padding: '0 10px'}}>
-            <Skeleton style={{width: '100%', height: '300px', background: '#1f2734'}} />
+          <Col
+            xs={6}
+            sm={4}
+            lg={3}
+            key={index}
+            className={`skeleton_custom ${viewType === 'list' ? 'list_skeleton' : ''}`}>
+            <Skeleton style={{width: '100%', height: '100%', background: '#1f2734'}} />
           </Col>
         ))
       ) : listMovie.length ? (
